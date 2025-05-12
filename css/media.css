@@ -261,7 +261,12 @@
 
 }
 
-
+@media screen and (max-width: 1000px){
+  .sec1 .msg-1,
+  .sec1 .msg-2 {
+    border-radius: 0;
+  }
+}
 
 @media screen and (max-width: 1200px){
   .sec1 .msg-1 > p,
@@ -343,4 +348,24 @@
     margin: 0;
     padding: 0;
   }  
+}
+
+
+/* Media of Images page */
+
+@media (max-width: 768px) {
+  .popup-image img {
+    object-fit: cover;
+    width: 95%;
+    height: auto;
+  }
+}
+
+
+@media (max-width: 530px) {
+  .cards img {
+    width: 10rem;
+    height: 13rem;
+    margin: 0.3rem;
+  }
 }

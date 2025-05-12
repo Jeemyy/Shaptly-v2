@@ -6,14 +6,16 @@
   box-sizing: border-box;
   font-family: 'Changa', sans-serif;
 }
-
 a{
+  text-decoration: none;
+}
+nav a{
   text-decoration: none;
   color: #000;
   transition: all 0.3s ease;
 }
 
-a:hover{
+nav a:hover{
   color: #0d8000;
 }
 
@@ -37,14 +39,36 @@ nav {
   z-index: 1000;
 }
 
-nav .logo {
+.logo {
   display: flex;
   align-items: center;
-  font-weight: bold;
-  font-size: 25px;
+  gap: 10px;
+}
+nav .logo a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+nav .logo img{
+  margin-top: 10px;
+  width: 8rem;
+  gap: 0.5rem;
+  display: block;
+}
+nav .logo i{
+  font-size: 3rem;
+  color: #092d45;
+}
+nav *{
+  background: #fff;
+}
+nav ul{
+  list-style: none;
+}
+nav a{
+  text-decoration: none;
   color: #000;
 }
-
 nav .links {
   display: flex;
   justify-content: flex-end;
@@ -114,35 +138,13 @@ header .buttons button{
 .buttons i{
   font-size: 1rem;;
 }
-
-header .search{
-  position: relative;
-  width: 30%;
-  margin-top: 10px;
+header .info h1{
+  font-size: 25px;
+  font-weight: 600;
 }
-
-header .search input{
-  width: 100%;
-  padding: 15px 20px;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0px 4px 70px -10px rgba(0, 0, 0, 0.6);
-  outline: none;
-}
-
-header .search button{
-  position: absolute;
-  left: 0;
-  padding: 12px;
-  font-size: 24px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-
-header .search button:hover{
-  color: #009a36;
+header .info p{
+  font-size: 15px;
+  font-weight: 500;
 }
 
 
@@ -171,7 +173,7 @@ header .search button:hover{
   position: relative;
   text-align: center;
   margin-top: 8%;
-  background-image: url("../img/about-bg.jpg");
+  background-image: url("../img/pic05.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 90%;
@@ -184,20 +186,40 @@ header .search button:hover{
 }
 .sec1 .msg-1{
   right: 3rem;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 .sec1 .msg-2{
   left: 3rem ;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
-.sec1  .title p
-{
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1e6c00;
+.sec1 .msg-2 h4{
+  font-size: 12px;
 }
 
+.sec1 .title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sec1  .title img{
+  width: 10rem;
+}
+.sec1 .title i{
+  font-size: 3rem;
+  color: #063a5f; 
+}
+
+.sec1 .title p{
+  font-size: 2rem;
+  font-weight: 700;
+  color: #003c67; 
+}
 .sec1  h4{
   font-size: 1rem;
   margin-top: 1rem;
+  color: #ffffff;
 }
 
 
@@ -229,6 +251,7 @@ header .search button:hover{
 }
 
 .sec1 .links a{
+  text-decoration: none;
   padding: 0.5rem 0.5rem;
   font-size: 1.5rem;
   background: #007834;
@@ -270,16 +293,24 @@ header .search button:hover{
   margin-bottom: 30px;
 }
 
+.content .sap h2{
+  font-size: 25px;
+  font-weight: 700;
+  color: #000000;
+}
+
 .content .sap a{
   display: flex;
   align-items: center;
   gap: 2px;
   color: #2d6a4f;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .content .sap a i{
   font-size: 18px;
+  font-weight: 700;
 }
 
 .content .cards{
@@ -335,6 +366,12 @@ header .search button:hover{
   font-size: 15px;
   font-weight: 900;
   margin-bottom: 2px;
+  gap: 10px;
+}
+.content .cards .item .top .info p i{
+  font-size: 1.2rem;
+
+  margin-right: 5px;
 }
 
 .content .cards .item .bottom{
@@ -413,20 +450,27 @@ header .search button:hover{
   display: flex;
   align-items: center;
   gap: 6px;
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 8px;
+  color: #000000;
   width: 32%;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #097100;
   border-radius: 10px;
+  border-bottom-left-radius: 0px;
+}
+.content .comments .right .item p{
+  /* margin-top: 5px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.content .comments .right .item i{
+  font-size: 2rem;
+  color: #2d6a4f;
 }
-.content .comments .right .item img{
-  width: 32px;
-  height: 32px;
-  object-fit: cover;
-  border-radius: 50%;
-}
+
 .sec3 {
   transform: translateY(1rem);
   transition: all 0.3s ease;
@@ -597,6 +641,11 @@ body.dark .contact-link:hover {
   right: 0;
   width: 100%;
 }
+.sec4 .container .right .btn{
+  background: none;
+  padding: 0;
+}
+
 .sec4 .container .right .btn a{
   padding: 0.5rem 3rem;
   text-align: center;
@@ -607,7 +656,6 @@ body.dark .contact-link:hover {
   border-radius: 5px;
   text-decoration: none;
 }
-
 footer{
   display: flex;
   flex-direction: column;
@@ -639,6 +687,7 @@ footer .columns .col h5{
 }
 
 footer .columns .col a{
+  text-decoration: none;
   margin-bottom: 4px;
   color: #ccc;
   font-size: 14px;
